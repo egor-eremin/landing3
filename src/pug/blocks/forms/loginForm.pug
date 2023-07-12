@@ -1,0 +1,23 @@
+include ../nav.pug
+header.page-header.page-header_forms.page-header_other-page
+	.section-form-decor.section-with-decor.section-with-decor_top-right.section-with-decor_bottom-left
+	.wrapper.wrapper-header.form-wrapper.wrapper-header_other-page
+		.text-header-wrapper.text-header-wrapper_login.text-header-wrapper_forms
+			.form-links.form-links_login
+				a(href="registration.html").form-links_item !{buttonText.signup[lang]}
+				a(href="recovery.html").form-links_item !{formsText.forgotText[lang]}
+			h1.h2-title.h2-title_login.h1-title_register.left !{buttonText.login[lang]}
+			.help-text.help-text-form.help-text-form_login.left !{formsText.text_required[lang]}
+			form#enter-form.main-form.main-form_login
+				.form-item.form-item_login
+					label.input-wrapper
+						span.label-form.label-form_sign !{formsText.labelMail[lang]}
+						input.form-input.form-input_sign#submit-email(type="email" required name="email" placeholder= formsText.placeholderEmail[lang])
+				.form-item.form-item_login.form-item_login-last
+					label.input-wrapper.input-wrapper-password
+						span.label-form.label-form_sign !{formsText.labelPassword[lang]}
+						input.form-input.form-input_sign.form-input-pass#submit-pass-show(type="password" name="password" minlength="2" maxlength="50" placeholder= formsText.placeholderPassword[lang])
+						.show-icon
+				.form-btn-submit.form-btn-submit_login
+					button.btn-submit.js--login-form.btn.btn-2.btn-login-form.btn-main-form: span !{buttonText.login[lang]}
+

@@ -1,0 +1,10 @@
+mixin marketAssets(title, text, img, svg)
+	section.section.section-assets.section-with-decor.section-with-decor_bottom-left
+		.wrapper.wrapper_assets(data-aos="")
+			.assets-wrapper
+				.assets-wrapper-img
+					.animate-svg(data-aos="" data-aos-delay="300" class="assets-decor assets-decor-" + img) !{svg}
+					img.assets-img-animate(src=baseDir + "assets/images/assets-" + img + ".png"  alt="assets-img")
+				.assets-wrapper-text
+					h2.h2-title.h2-title_assets.left !{title}
+					p.assets-text !{text}

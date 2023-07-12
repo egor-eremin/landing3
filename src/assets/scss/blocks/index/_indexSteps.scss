@@ -1,0 +1,126 @@
+.steps-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: rem(32px);
+  padding-right: rem(40px);
+  padding-left: rem(40px);
+  margin-bottom: rem(40px);
+}
+.h2-title_steps {
+  margin-bottom: rem(120px);
+}
+.steps-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:hover {
+    .steps-number {
+      box-shadow: 0px rem(18px) rem(25px) rgba(228, 81, 92, 0.35);
+      color: $color-white;
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+.steps-number {
+  width: rem(120px);
+  height: rem(120px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-lato;
+  font-weight: 700;
+  font-size: rem(48px);
+  line-height: rem(64px);
+  color: $color-text;
+  background: $color-white;
+  box-shadow: 0px rem(18px) rem(25px) rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: rem(24px);
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    background: linear-gradient(149.17deg, #FB868E 13.36%, #D74751 86.66%);
+    opacity: 0;
+  }
+  span {
+    position: relative;
+    z-index: 2;
+    transition: 0.3s ease-in-out;
+  }
+}
+.section-steps {
+  padding-bottom: rem(140px);
+  overflow: hidden;
+}
+.steps-decor {
+  position: absolute;
+  bottom: rem(-94px);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: none;
+  z-index: 1;
+  margin-left: rem(308px);
+}
+.wrapper-steps {
+  position: relative;
+  z-index: 2;
+}
+.steps-list__item-1,
+.steps-list__item-2 {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: rem(192px);
+    height: 1px;
+    background: url("../images/steps-line.png") no-repeat;
+    background-size: 100%;
+    transform: translateX(100%);
+    right: rem(83px);
+    top: rem(59px);
+  }
+}
+
+// ADAPTIVE
+@media (max-width: 1160px) {
+  .h2-title_steps {
+    margin-bottom: rem(48px) !important;
+  }
+  .steps-number {
+    width: rem(64px);
+    height: rem(64px);
+    font-size: rem(18px);
+    line-height: rem(20px);
+    margin-bottom: rem(16px);
+  }
+  .steps-decor {
+    display: none;
+  }
+  .steps-list__item {
+    pointer-events: none;
+  }
+  .steps-list__item-1,
+  .steps-list__item-2 {
+    position: relative;
+    &::before {
+      display: none;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .steps-list {
+    grid-template-columns: 1fr;
+  }
+}

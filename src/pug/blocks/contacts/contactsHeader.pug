@@ -1,0 +1,10 @@
+include ../nav.pug
+header.page-header.page-header_other-page.page-header_small
+	.wrapper-page-image(data-aos="" data-aos-delay="300")
+		.wrapper.wrapper__header-bg
+			img.header-img.header-img_contacts(src=baseDir + "assets/images/markets-img-header.svg" alt="markets")
+	.wrapper.wrapper-header.wrapper-header_contacts.wrapper-header_other-page
+		.text-header-wrapper.text-header-wrapper_contacts
+			h1.page-header__title.page-header__title-contacts.h1-title !{contactsHeaderText.title[lang]}
+			p.page-header__text.page-header__text-contacts !{contactsHeaderText.text[lang]}
+			button.callback-open-js.btn.btn-start-trade(class="callback-open-" + lang) !{buttonText.btnCallback[lang]}

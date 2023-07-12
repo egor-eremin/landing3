@@ -1,0 +1,35 @@
+include ../nav.pug
+header.main-header.page-header
+	.video-bg
+		video.main-video(loop autoplay muted playsinline playbackRate=2 poster=baseDir + "assets/images/poster-video.jpg")
+			source(src=baseDir + "video.mp4" type="video/mp4")
+			source(src=baseDir + "video.webm" type="video/webm")
+	.wrapper.wrapper-header
+		.js-bg-main.main-background-slider-list
+				.main-background-slider-list__item.main-background-slider-list__item-1
+					.wrapper.main-background-slider_wrapper
+						img.main-img-slider.main-img-slider_1(src=baseDir + "assets/images/main-slider-1.svg" alt="main slide")
+				.main-background-slider-list__item.main-background-slider-list__item-2
+					.wrapper.main-background-slider_wrapper
+						img.main-img-slider.main-img-slider_2(src=baseDir + "assets/images/main-slider-2.svg" alt="main slide")
+				.main-background-slider-list__item.main-background-slider-list__item-3
+					.wrapper.main-background-slider_wrapper
+						img.main-img-slider.main-img-slider_3(src=baseDir + "assets/images/main-slider-3.svg" alt="main slide")
+				.main-background-slider-list__item.main-background-slider-list__item-4
+					.wrapper.main-background-slider_wrapper
+						img.main-img-slider.main-img-slider_4(src=baseDir + "assets/images/main-slider-4.svg" alt="main slide")
+		.js-main-slider.main-slider-text
+			-for(let i = 1; i < 5; i++)
+				.main-slider__item(class=["main-slider__item"+i])
+					if i == 1
+						h1.main-slider__title.h1-title !{indexHeaderText["slide"+i].title[lang]}
+					else
+						.main-slider__title.h1-title !{indexHeaderText["slide"+i].title[lang]}
+					p.main-slider__text.page-header__text !{indexHeaderText["slide"+i].text[lang]}
+					a(href=linkSignup).btn.btn-start-trade !{buttonText.btnStartTrade[lang]}
+		.wrapper.arrow-main-wrapper
+			.arrow-slider-wrapper.arrow-slider-wrapper_main
+				.number-slide-wrapper
+					.current-slide.number-slider
+					.number-of-slides.number-slider
+		.dots-wrapper.dots-wrapper_main-header

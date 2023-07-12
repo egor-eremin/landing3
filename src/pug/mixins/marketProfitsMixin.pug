@@ -1,0 +1,11 @@
+mixin marketProfits(text, img)
+	section.section.section-profits
+		.wrapper
+			.section-profits__wrapper
+				img.section-profits__img(src=baseDir + ["assets/images/section-profits.svg"] alt="profit" title="profit" data-aos="fade-right")
+				.profits-list
+					-for(let i = 1; i < 5; i++)
+						.profits-list__item(data-aos="fade-up")
+							//- img.profits-list__img(src=baseDir + ["assets/images/profit_"+img+i+".svg"] alt="profit" title="profit")
+							h3.profits-list__title.subtitle !{text["profit"+i].title[lang]}
+							p.profits-list__text !{text["profit"+i].text[lang]}

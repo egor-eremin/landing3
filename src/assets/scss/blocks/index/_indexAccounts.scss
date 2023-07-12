@@ -1,0 +1,208 @@
+.accounts-list {
+  display: flex;
+  align-items: flex-start;
+}
+.account-list__item {
+  width: rem(288px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(8px) rem(16px) rem(21px);
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: rem(8px);
+    top: 0;
+    left: 0;
+  }
+}
+.account-list__item2 {
+  background: $color-white;
+  box-shadow: 0px rem(4px) rem(33px) rgba(48, 55, 120, 0.05);
+  border-radius: 0px 0px rem(32px) rem(32px);
+  border: 1px solid #EAEBF5;
+  &::before {
+    width: calc(100% + 2px);
+    left: -1px;
+    top: -1px;
+  }
+}
+.account-list__item1 {
+  margin-left: auto;
+  &::before {
+    background: $color-red;
+  }
+}
+.account-list__item2 {
+  &::before {
+    background: #1DB2AD;
+  }
+}
+.account-list__item3 {
+  &::before {
+    background: #6583FE;
+  }
+}
+.accounts-icon {
+  width: rem(88px);
+  height: rem(88px);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.accounts-icon_1 {
+  background-image: url("../images/accounts-icon-1.svg");
+}
+.accounts-icon_2 {
+  background-image: url("../images/accounts-icon-2.svg");
+}
+.accounts-icon_3 {
+  background-image: url("../images/accounts-icon-3.svg");
+}
+.accounts-list__title {
+  text-align: center;
+}
+.accounts-list__text {
+  font-size: rem(12px);
+  line-height: rem(16px);
+  text-align: center;
+  min-height: rem(64px);
+}
+.accounts-conditions-item {
+  display: flex;
+  justify-content: center;
+  font-size: 0;
+  margin-bottom: rem(8px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  span {
+    font-weight: 500;
+    color: $color-title;
+    font-size: rem(16px);
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: rem(24px);
+    height: rem(24px);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  &:nth-child(1),
+  &:nth-child(2) {
+    &::after {
+      display: none;
+    }
+  }
+  &.check {
+    &::after {
+      background-image: url("../images/icon-check.svg");
+    }
+  }
+  &.hide {
+    &::after {
+      background-image: url("../images/icon-check_no-more.svg");
+    }
+  }
+}
+.accounts-list__conditions {
+  width: 100%;
+}
+.btn_accounts {
+  margin-top: rem(4px);
+}
+.account-title__item {
+  font-size: rem(12px);
+  line-height: rem(16px);
+  color: $color-title;
+  margin-bottom: rem(16px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.account-title {
+  margin-top: rem(211px);
+}
+.section-accounts {
+  padding-bottom: rem(131px);
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: rem(881px);
+    height: rem(420px);
+    background: url("../images/accounts-decor-2.svg") no-repeat;
+    background-size: 100%;
+    pointer-events: none;
+  }
+}
+.accounts-decor {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  margin-left: rem(-570px);
+  top: rem(-36px);
+}
+
+// ADAPTIVE
+@media (max-width: 1160px) {
+  .section-accounts {
+    &::before {
+      display: none;
+    }
+  }
+  .accounts-decor {
+    display: none;
+  }
+  .accounts-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .account-title {
+    display: none;
+  }
+  .account-list__item1 {
+    margin-left: initial;
+  }
+  .h2-title__accounts {
+    margin-bottom: rem(40px) !important;
+  }
+  .account-list__item {
+    max-width: rem(600px);
+    width: 100%;
+    margin-bottom: rem(40px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .accounts-list__text {
+    font-size: rem(16px);
+    line-height: rem(20px);
+    max-width: rem(400px);
+    min-height: auto;
+    margin-bottom: rem(16px);
+  }
+  .accounts-conditions-item {
+    font-size: rem(16px);
+    color: $color-title;
+    justify-content: space-between;
+    span {
+      margin-left: rem(8px);
+    }
+    &::after {
+      margin-left: rem(8px);
+    }
+  }
+  .btn_accounts {
+    margin-top: rem(24px);
+  }
+  .accounts-list__conditions {
+    max-width: rem(400px);
+  }
+}

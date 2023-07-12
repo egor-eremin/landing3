@@ -1,0 +1,18 @@
+section.section.section_grey.section-steps
+	img.steps-decor(src= baseDir + "assets/images/steps-decor.svg" alt="steps-decor")
+	.wrapper.wrapper-steps
+		h2.h2-title.h2-title_steps !{indexStepsText.h2[lang]}
+		.steps-list
+			.steps-list__item.steps-list__item-1(data-aos="zoom-in" data-aos-delay="300")
+				.steps-number: span 01
+				h3.center.steps-list__title.h3-title !{indexStepsText.step1.title[lang]}
+				p.center.steps-list__text !{indexStepsText.step1.text[lang]}
+			.steps-list__item.steps-list__item-2(data-aos="zoom-in" data-aos-delay="450")
+				.steps-number: span 02
+				h3.center.steps-list__title.h3-title !{indexStepsText.step2.title[lang]}
+				p.center.steps-list__text !{indexStepsText.step2.text[lang]}
+			.steps-list__item.steps-list__item-3(data-aos="zoom-in" data-aos-delay="600")
+				.steps-number: span 03
+				h3.center.steps-list__title.h3-title !{indexStepsText.step3.title[lang]}
+				p.center.steps-list__text !{indexStepsText.step3.text[lang]}
+		a(href=linkSignup).btn.btn-2.btn-center: span !{buttonText.btnStartTrade[lang]}

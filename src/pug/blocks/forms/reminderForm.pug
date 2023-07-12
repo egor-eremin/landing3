@@ -1,0 +1,18 @@
+include ../nav.pug
+header.page-header_forms.page-header_forms.page-header.page-header_other-page
+	.section-form-decor.section-with-decor.section-with-decor_top-right.section-with-decor_bottom-left
+	.wrapper.wrapper-header.form-wrapper.wrapper-header_other-page
+		.text-header-wrapper.text-header-wrapper_login.text-header-wrapper_forms
+			.form-links.form-links_login
+				a(href="login.html").form-links_item.center !{formsText.allreadyText[lang]}
+				a(href="registration.html").form-links_item !{buttonText.signup[lang]}
+			h1.h2-title.h1-title_register.h1-title_reminder.left !{fotmsText.titleReminder[lang]}
+			.help-text.help-text-form.help-text-form_login.left !{formsText.text_required[lang]}
+			form#restore-form.main-form.main-form_reminder.main-form_login
+				.form-item.form-item_login
+					label.input-wrapper
+						span.label-form.label-form_sign !{formsText.labelMail[lang]}
+						input.form-input.form-input_sign#submit-email(type="email" required name="email")
+				.form-btn-submit.form-btn-submit_login
+					button.btn-submit.js--repass.btn.btn-2.btn-login-form.btn-main-form: span !{buttonText.btnSend[lang]}
+

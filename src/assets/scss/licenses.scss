@@ -1,0 +1,121 @@
+@import "../../../node_modules/normalize.css/normalize";
+@import "../../../node_modules/magnific-popup/src/css/main";
+@import "partials/fonts";
+@import "partials/functions";
+@import "partials/variables";
+@import "partials/aos";
+@import "partials/slick";
+@import "blocks/index/indexNews";
+
+
+@import "blocks/common";
+@import "blocks/nav";
+@import "blocks/footer";
+@import "blocks/forms/for-forms";
+@import "blocks/contacts/for-contacts";
+
+
+.licenses-list__item {
+  position: relative;
+  border-radius: rem(32px);
+  background: $color-white;
+  padding: rem(32px) rem(24px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.licenses-icon {
+  width: rem(248px);
+  height: rem(248px);
+  border-radius: 50% 0 50% 50%;
+  background: #FFFFFF;
+  border: 1px solid #EAEBF5;
+  box-shadow: 0px rem(4px) rem(33px) rgba(48, 55, 120, 0.05);
+  margin-bottom: rem(24px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: rem(180px);
+    height: rem(164px);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+.licenses-icon_1 {
+  &::before {
+    background-image: url("../images/licenses-1.png");
+  }
+}
+.licenses-icon_2 {
+  &::before {
+    background-image: url("../images/licenses-2.png");
+  }
+}
+.licenses-icon_3 {
+  &::before {
+    background-image: url("../images/licenses-3.png");
+  }
+}
+.licenses-icon_4 {
+  &::before {
+    background-image: url("../images/licenses-4.png");
+  }
+}
+.licenses-icon_5 {
+  &::before {
+    background-image: url("../images/licenses-5.png");
+  }
+}
+.licenses-icon_6 {
+  &::before {
+    background-image: url("../images/licenses-6.png");
+  }
+}
+.licenses-icon_7 {
+  &::before {
+    background-image: url("../images/licenses-7.png");
+  }
+}
+.licenses-icon_8 {
+  &::before {
+    background-image: url("../images/licenses-8.png");
+  }
+}
+.licenses-list {
+  position: relative;
+  margin-bottom: rem(32px);
+  margin-left: rem(-12px);
+  margin-right: rem(-12px);
+  .slick-slide {
+    transition: 0.3s ease-in-out;
+    & > div {
+      height: 100%;
+    }
+  }
+}
+.licenses-list-item-wrapper {
+  padding-left: rem(12px);
+  padding-right: rem(12px);
+  height: 100%;
+}
+.text-header-wrapper_history {
+  max-width: rem(648px);
+}
+.section-licenses {
+  padding-bottom: rem(128px);
+}
+.arrow-slider-wrapper_licenses {
+  justify-content: flex-end;
+}
+
+
+@media (max-width: 1160px) {
+  .section-licenses {
+    padding-bottom: rem(64px) !important;
+  }
+}

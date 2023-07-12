@@ -1,0 +1,107 @@
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: rem(24px);
+}
+.advantages-list__icon {
+  width: rem(64px);
+  height: rem(64px);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: rem(8px);
+}
+.advantages-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(24px);
+  min-height: rem(284px);
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-8deg);
+    border-radius: rem(32px);
+    border: 1px solid $color-red;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+.advantages-list__icon-1 {
+  background-image: url("../images/advantages-list__icon-1.svg");
+}
+.advantages-list__icon-2 {
+  background-image: url("../images/advantages-list__icon-2.svg");
+}
+.advantages-list__icon-3 {
+  background-image: url("../images/advantages-list__icon-3.svg");
+}
+.advantages-list__icon-4 {
+  background-image: url("../images/advantages-list__icon-4.svg");
+}
+.advantages-list__icon-5 {
+  background-image: url("../images/advantages-list__icon-5.svg");
+}
+.advantages-list__icon-6 {
+  background-image: url("../images/advantages-list__icon-6.svg");
+}
+.section-advantages {
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    width: rem(881px);
+    height: rem(420px);
+    z-index: -1;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    background-image: url("../images/advantages-decor-1.svg");
+  }
+  &::after {
+    bottom: 0;
+    right: 0;
+    background-image: url("../images/advantages-decor-2.svg");
+  }
+}
+
+
+@media (max-width: 1160px) {
+  .section-advantages {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  .advantages-list__item {
+    min-height: auto;
+    &::before {
+      display: none;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .advantages-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 760px) {
+  .advantages-list {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+}

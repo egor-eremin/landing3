@@ -1,0 +1,27 @@
+include ../nav.pug
+header.page-header.page-header_other-page
+	.wrapper-page-image(data-aos="" data-aos-delay="300")
+		.wrapper.wrapper__header-bg
+			img.header-img.header-img_about(src=baseDir + "assets/images/about.svg" alt="about")
+	.wrapper.wrapper-header.wrapper-header_other-page.wrapper-header_about
+		.text-header-wrapper.text-header-wrapper_about
+			h1.page-header__title.h1-title !{aboutHeaderText.title[lang]}
+			p.page-header__text.page-header__text_about !{aboutHeaderText.text[lang]}
+		.counter-list
+			.counter-list__item.counter-list__item-1(data-aos="fade" data-aos-delay="300")
+				h3.color-white.counter-list__title.h3-title !{aboutCounterText.counter1.title[lang]}
+				p.counter-list__text !{aboutCounterText.counter1.text[lang]}
+			.counter-list__item.counter-list__item-2(data-aos="fade" data-aos-delay="450")
+				h3.color-white.counter-list__title.h3-title !{aboutCounterText.counter2.title[lang]}
+				p.counter-list__text !{aboutCounterText.counter2.text[lang]}
+			.counter-list__item.counter-list__item-3(data-aos="fade" data-aos-delay="600")
+				h3.color-white.counter-list__title.h3-title !{aboutCounterText.counter3.title[lang]}
+				p.counter-list__text !{aboutCounterText.counter3.text[lang]}
+			.counter-list__item.counter-list__item-4(data-aos="fade" data-aos-delay="750")
+				h3.color-white.counter-list__title.h3-title !{aboutCounterText.counter4.title[lang]}
+				p.counter-list__text !{aboutCounterText.counter4.text[lang]}
+			.counter-list__item.counter-list__item-5(data-aos="fade" data-aos-delay="900")
+				h3.color-white.counter-list__title.h3-title !{aboutCounterText.counter5.title[lang]}
+				p.counter-list__text !{aboutCounterText.counter5.text[lang]}
+		a(href=linkSignup).btn.btn-about !{buttonText.btnStartTrade[lang]}
+
